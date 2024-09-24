@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client/src:/app/src
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    tty: true
+
+  server:
+    build: ./server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./server:/app
+    environment:
+      - GO_ENV=development
+    depends_on:
+      - ollama
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    volumes:
+      - ollama:/root/.ollama
+      - ./ollama/start.sh:/start.sh
+    ports:
+      - 11434:11434
+    entrypoint: ["/bin/bash", "/start.sh"]
+
+volumes:
+  ollama:
