@@ -1,4 +1,4 @@
-module catgpt-backend
+module motogpt-backend
 
 go 1.22.2
 

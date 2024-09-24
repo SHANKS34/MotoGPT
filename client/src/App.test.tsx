@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders title", () => {
   render(<App />);
-  const linkElement = screen.getAllByText(/Cat-GPT/i)[0];
+  const linkElement = screen.getAllByText(/Moto/i)[0];
   expect(linkElement).toBeInTheDocument();
 });

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"catgpt-backend/pkg/handler"
-	"catgpt-backend/pkg/middleware"
+	"motogpt-backend/pkg/handler"
+	"motogpt-backend/pkg/middleware"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 	"log"

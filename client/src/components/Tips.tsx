@@ -49,7 +49,7 @@ const Tips: React.FC = () => {
 
   return (
     <div className="h-full flex flex-col items-center justify-center">
-      <span className="mb-4">You can ask Cat-GPT to:</span>
+      <span className="mb-4">You can ask Moto to:</span>
       <div className="flex space-x-4 w-full">
         {tips.map((tip, index) => (
           <TipItem key={index} icon={tip.icon} text={tip.text} />

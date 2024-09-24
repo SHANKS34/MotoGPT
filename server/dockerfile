@@ -14,7 +14,7 @@ RUN go mod download
 COPY . .
 
 # Build the Go app
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o catgpt-backend ./cmd/catgpt-backend/
+RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o motogpt-backend ./cmd/motogpt-backend/
 
 # Start a new stage from scratch
 FROM alpine:latest
@@ -25,7 +25,7 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /root/
 
 # Copy the Pre-built binary file from the previous stage
-COPY --from=builder /app/catgpt-backend .
+COPY --from=builder /app/motogpt-backend .
 
 # Copy the environment file
 COPY --from=builder /app/.env .
@@ -34,4 +34,4 @@ COPY --from=builder /app/.env .
 EXPOSE 8080
 
 # Command to run the executable
-CMD ["./catgpt-backend"]
+CMD ["./motogpt-backend"]

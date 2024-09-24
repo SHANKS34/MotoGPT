@@ -11,7 +11,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
   return (
     <header className="px-2 py-4 text-start flex">
       <div>
-        <h1 className="text-4xl font-mono font-semibold">Cat-GPT</h1>
+        <h1 className="text-4xl font-mono font-semibold">Moto</h1>
         <p className="text-sm">made by COPS, IIT BHU</p>
       </div>
       {/* <button

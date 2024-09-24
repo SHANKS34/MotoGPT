@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({ input, setInput, handleSend }) => {
     <footer className="m-2 flex items-center rounded-lg bg-surface-container-highest">
       <textarea
         className="flex-1 p-2 mx-2 focus:outline-none bg-surface-container-highest text-lg resize-none overflow-y-auto max-h-24"
-        placeholder="Chat with Cat-GPT..."
+        placeholder="Chat with Moto..."
         value={input}
         onChange={handleInput}
         rows={inputRows}

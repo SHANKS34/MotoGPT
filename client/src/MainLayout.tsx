@@ -55,12 +55,12 @@ const MainLayout: React.FC = () => {
         console.log("Response from API: \n", resData.response);
 
         // Dispatch the message with the updated content from the API
-        const catMessage = {
+        const myMessage = {
           type: "text",
           content: resData.response,
           sender: "ollama",
         };
-        dispatch(sendMessage(catMessage));
+        dispatch(sendMessage(myMessage));
       } catch (error) {
         console.error("Error here:", error);
       }
